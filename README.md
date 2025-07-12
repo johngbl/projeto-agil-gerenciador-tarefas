@@ -69,8 +69,7 @@ Essa mudança envolveu:
 │   └── test_app.py
 ├── 📁 docs
 │   ├── diagrama_classes.png
-│   ├── casos_de_uso.png
-│   └── diagramas.drawio
+│   └── casos_de_uso.png
 ├── 📄 README.md
 ├── 📄 requirements.txt
 └── 📄 .github
