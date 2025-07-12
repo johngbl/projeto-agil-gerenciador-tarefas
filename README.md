@@ -23,7 +23,7 @@ Este sistema permite que usuários realizem operações básicas de CRUD (Create
 
 ## ⚙️ Tecnologias Utilizadas
 
-- **Python 3.10+**
+- **Python 3.13+**
 - **Flask**
 - **SQLite**
 - **pytest**
@@ -81,7 +81,7 @@ Essa mudança envolveu:
 ## 🧾 Instruções para Execução Local
 
 ### Requisitos
-- Python 3.10+
+- Python 3.13+
 - pip
 
 ### Passos
