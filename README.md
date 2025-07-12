@@ -10,7 +10,7 @@ Este sistema permite que usuários realizem operações básicas de CRUD (Create
 - Título
 - Descrição
 - Status (Pendente, Em Progresso, Concluído)
-- (Escopo Expandido) Prazo de Entrega
+- Prazo de Entrega *(Mudança de escopo implementada)*
 
 ## 🚀 Funcionalidades
 
@@ -19,52 +19,69 @@ Este sistema permite que usuários realizem operações básicas de CRUD (Create
 - Atualizar informações da tarefa
 - Deletar tarefa
 - Filtrar tarefas por status
-- Simulação de mudança de escopo (campo `prazo_entrega`)
+- Simulação de mudança de escopo (`prazo_entrega`)
 
 ## ⚙️ Tecnologias Utilizadas
 
-- Linguagem: **Python 3.10**
-- Framework: **Flask**
-- Banco de Dados: **SQLite**
-- Testes: **pytest**
-- CI/CD: **GitHub Actions**
-- UML: **draw.io**
+- **Python 3.10+**
+- **Flask**
+- **SQLite**
+- **pytest**
+- **GitHub Actions**
+- **draw.io** (UML)
 
 ## 🧪 Testes Automatizados
 
-Utilizamos testes unitários para garantir a confiabilidade do sistema. Os testes são executados automaticamente via GitHub Actions a cada `push` no repositório.  
-Os testes cobrem as funcionalidades principais do CRUD e validações de entrada.
+Utilizamos testes unitários com `pytest`, executados automaticamente pelo GitHub Actions a cada `push`.  
+Os testes cobrem:
+- Criação de tarefa
+- Listagem
+- Atualização
+- Exclusão
 
 ## 🔄 Gestão de Mudanças
 
-Durante o desenvolvimento, foi simulada uma **mudança de escopo**, adicionando o campo `prazo_entrega` às tarefas. A alteração foi justificada, documentada e incorporada no quadro Kanban e no código.
+Durante o desenvolvimento, foi simulada uma **mudança de escopo**, com a adição do campo `prazo_entrega` nas tarefas.  
+Essa mudança envolveu:
+- Alterações no modelo de dados
+- Atualização do formulário HTML
+- Ajustes no código de backend
+- Novos testes criados
+- Atualização no README e Kanban
 
 ## 🛠️ Metodologia Adotada
 
-- **Kanban**: Utilizado para organizar as tarefas na aba *Projects* do GitHub.
-- **SCRUM**: Ciclo de trabalho em sprints simuladas.
-- **DevOps**: Integração contínua com testes automatizados via GitHub Actions.
+- **Kanban**: Projeto gerenciado via GitHub Projects com colunas:
+  - A Fazer
+  - Em Progresso
+  - Concluído
 
-## 🗂️ Organização do Repositório
+- **SCRUM (simulado)**: Planejamento em sprints curtas para dividir entregas
+- **CI/CD com GitHub Actions**
+
+## 📁 Organização do Repositório
 
 ```
 📁 projeto-agil
 ├── 📁 src
 │   └── app.py
 ├── 📁 tests
-│   └── test_tarefas.py
+│   └── test_app.py
 ├── 📁 docs
+│   ├── diagrama_classes.png
+│   ├── casos_de_uso.png
 │   └── diagramas.drawio
 ├── 📄 README.md
 ├── 📄 requirements.txt
-└── 📄 .github/workflows/testes.yml
+└── 📄 .github
+    └── workflows
+        └── testes.yml
 ```
 
 ## 🧾 Instruções para Execução Local
 
-### Pré-requisitos
+### Requisitos
 - Python 3.10+
-- Git
 - pip
 
 ### Passos
@@ -76,45 +93,45 @@ pip install -r requirements.txt
 python src/app.py
 ```
 
-Acesse no navegador: `http://localhost:5000`
+Acesse em `http://localhost:5000` no navegador.
 
 ## 📋 Requisitos
 
 ### Funcionais
 - Criar, listar, editar e excluir tarefas
-- Atualizar status da tarefa
+- Atualizar status
 - Armazenar e exibir prazo de entrega
 
 ### Não Funcionais
-- Tempo de resposta < 2s
-- Testes automatizados a cada push
-- Repositório com pelo menos 10 commits bem descritos
+- Tempo de resposta inferior a 2 segundos
+- Testes executados via pipeline automatizada
+- Commits descritivos e distribuídos
 
 ## 🧱 Modelagem UML
 
-- Diagrama de Casos de Uso
-- Diagrama de Classes
+- **🔗 Diagrama de Casos de Uso:** [Visualizar](docs/casos_de_uso.png)
+- **🔗 Diagrama de Classes:** [Visualizar](docs/diagrama_classes.png)
 
-(Disponível na pasta `/docs/diagramas.drawio`)
+Criados com [draw.io](https://draw.io)
 
-## 🔄 Simulação de Mudança de Escopo
+## 🗂️ Kanban no GitHub
 
-Foi adicionada uma nova funcionalidade: `prazo_entrega`.  
-Essa mudança envolveu:
-- Alteração no modelo de dados
-- Atualização da documentação (README)
-- Nova tarefa no quadro Kanban
-- Novo teste automatizado
+A gestão do projeto foi feita utilizando GitHub Projects no formato Kanban.  
+🔗 [Acessar o quadro Kanban]([https://github.com/johngbl/projeto-agil-gerenciador-tarefas/projects/1](https://github.com/users/johngbl/projects/3))
+
+## 🖼️ Demonstração
+
+(Insira aqui um print ou gif do app rodando)
 
 ## 👨‍💻 Autor
 
-**Gabriel [Seu Sobrenome]**  
-Engenharia de Software - Projeto Ágil com GitHub  
-TechFlow Solutions - 2025
+**João Gabriel**  
+Curso de Engenharia de Software  
+TechFlow Solutions — 2025
 
 ## 🧠 Aprendizados
 
-- Aplicação prática de Engenharia de Software
-- Gerenciamento ágil com GitHub
-- CI/CD com GitHub Actions
-- Organização de projeto profissional
+- Aplicação prática dos conceitos de Engenharia de Software
+- Testes automatizados com GitHub Actions
+- Integração contínua e versionamento com Git
+- Gestão ágil de tarefas com GitHub Projects
